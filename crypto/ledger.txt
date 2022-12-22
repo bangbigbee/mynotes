@@ -5,8 +5,14 @@
 115 792 089 237 316 195 423 570 985 008 687 907 853 
 269 984 665 640 564 039 457 584 007 913 129 639 936
 Một phép so sánh nhỏ: số nguyên tử trên trái đất ước tính khoảng 2^166.
-- Cụm từ khôi phục được xem như 1 master private key. Được lưu vào chip của mỗi thiết bị Ledger,
+- Cụm từ khôi phục được xem như 1 master private key, được lưu vào chip của mỗi thiết bị Ledger,
 gọi là Secure Element, một loại chip giống như trong Credit, SIM card, được thẩm định bởi bên thứ 3
+- Khi thiết bị khởi tạo 24 từ khóa một cách ngẫu nhiên: tất cả các private keys sẽ được tạo ra và lưu vào chip Secure Element (SE). Nếu nhặt được một ví ledger, muốn lấy hết tài sản trong đó thì: 1) hoặc là biết PIN code, 2) hoặc là trích xuất toàn bộ private keys từ dữ liệu trong chip SE.
+- Private keys chỉ được biết bởi ví lạnh đó, dùng để xác thực phần cứng, xem có phải ví chính hãng hay không.
 - Nếu không có Secure Element chip, PIN và private key có thể bị trích xuất dễ dàng hơn.
 - Ledger sử dụng hệ điều hành tùy chỉnh BOLOS, giúp tách biệt 24 từ khóa khỏi ứng dụng.
 - Private key không bao giờ được đưa ra khỏi thiết bị nhờ vào kết hợp của BOLOS và chip Secure Element
+- BOLOS có an toàn? Được thẩm định.
+- Ledger live có an toàn? Code được công khai.
+
+https://www.reddit.com/r/ledgerwallet/comments/4xgi2t/comment/d6fcxid/
