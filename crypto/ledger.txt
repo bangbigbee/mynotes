@@ -1,0 +1,12 @@
+1. Ledger sử dụng chuẩn BIP-39 để tạo và phiên dịch cụm từ khôi phục (recovery phrases)
+- Với chuẩn BIP-39: một bộ recovery phrase là 1 tổ hợp 24 từ trong 2048 từ.
+- Ví ledger tạo ra 2^256 từ khóa. Để hình dung độ kinh khủng của con số này: 2 hàng
+2^256 = 
+115 792 089 237 316 195 423 570 985 008 687 907 853 
+269 984 665 640 564 039 457 584 007 913 129 639 936
+Một phép so sánh nhỏ: số nguyên tử trên trái đất ước tính khoảng 2^166.
+- Cụm từ khôi phục được xem như 1 master private key. Được lưu vào chip của mỗi thiết bị Ledger,
+gọi là Secure Element, một loại chip giống như trong Credit, SIM card, được thẩm định bởi bên thứ 3
+- Nếu không có Secure Element chip, PIN và private key có thể bị trích xuất dễ dàng hơn.
+- Ledger sử dụng hệ điều hành tùy chỉnh BOLOS, giúp tách biệt 24 từ khóa khỏi ứng dụng.
+- Private key không bao giờ được đưa ra khỏi thiết bị nhờ vào kết hợp của BOLOS và chip Secure Element
